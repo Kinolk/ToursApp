@@ -1,0 +1,31 @@
+﻿<Page x:Class="ToursApp.AddEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ToursApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddEditPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Название" VerticalAlignment="Center" Margin="10,0,0,0" />
+        <TextBlock Text="Количество звёзд" Grid.Row="1" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        <TextBlock Text="Страна" Grid.Row="2" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        <TextBox Text="{Binding Name}" MaxLength="100" Grid.Column="1" VerticalAlignment="Center" Margin="10,0,10,0"></TextBox>
+        <TextBox Text="{Binding CountOfStars}" Grid.Column="1" Grid.Row="1" Width="152" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"></TextBox>
+        <ComboBox SelectedItem="{Binding Country}" x:Name="ComboCountries" DisplayMemberPath="Name" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Margin="10"></ComboBox>
+        <Button Content="Сохранить" Name="Btn_Save" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Btn_Save_Click" />
+
+    </Grid>
+</Page>
