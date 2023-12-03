@@ -1,0 +1,33 @@
+﻿<Window x:Class="ToursApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToursApp"
+        mc:Ignorable="d"
+         
+        Title="MainWindow" Height="500" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        
+         <Grid Background="#00A9FF" Panel.ZIndex="-2">
+            <Button Content="Назад" Name="Btn_Back" HorizontalAlignment="Left" Click="Btn_Back_Click" Margin="426,22,0,23"/>
+            <Button Content="Туры" Name="Btn_tour" HorizontalAlignment="Left" Click="Btn_tour_Click" Margin="617,22,10,23"/>
+            <!-- Отображение логотипа ↓-->
+            <Image Source="Resources/logotip.png" HorizontalAlignment="Left"/>
+            <!-- Отображение логотипа ↑-->
+        </Grid>
+        <Grid Grid.Row="2" Background="#89CFF3"/>
+        <Frame NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Grid.Row="1" Name="MainFrame" />
+
+        <!--
+        <Button Grid.Row="0" Background="#ff5600">
+        -->
+
+
+    </Grid>
+</Window>
